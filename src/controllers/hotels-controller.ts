@@ -3,7 +3,7 @@ import { Response } from "express";
 import httpStatus from "http-status";
 import hotelService from "@/services/hotels-service";
 
-export async function getHotels(req: AuthenticatedRequest, res: Response) {
+export async function getAllHotels(req: AuthenticatedRequest, res: Response) {
   const { userId } = req;
 
   try {
@@ -30,7 +30,7 @@ export async function getHotels(req: AuthenticatedRequest, res: Response) {
   }
 }
 
-export async function getHotelId(req: AuthenticatedRequest, res: Response) {
+export async function getHoteBylId(req: AuthenticatedRequest, res: Response) {
   const id = Number(req.params.hotelId);
   const { userId } = req;
 
